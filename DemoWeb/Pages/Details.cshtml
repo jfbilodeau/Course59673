@@ -1,0 +1,20 @@
+﻿@page "{id}"
+@model DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    @if (Model.Employee == null)
+    {
+        <h2>Employee ID @Model.Id not found</h2>
+    }
+    else
+    {
+        <h2>Details for @Model.Id</h2>
+        <p>ID: @Model.Employee.Id</p>
+        <p>Name: @Model.Employee.FirstName @Model.Employee.LastName</p>
+        <p>Salary: @Model.Employee.Salary</p>
+        <p>Department: @Model.Employee.Dept</p>
+    }
+</div>`
